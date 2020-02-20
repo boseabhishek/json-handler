@@ -137,8 +137,8 @@ func file(dir string) (string, error) {
 		return "", fmt.Errorf("contains more than 1 file inside %s", dir)
 	}
 
-	if files[0] != "users.json" {
-		return "", fmt.Errorf("users.json file not found or incorrect name of file inside %s", dir)
+	if files[0] != "TestStatus.json" {
+		return "", fmt.Errorf("TestStatus.json file not found or incorrect name of file inside %s", dir)
 	}
 
 	return files[0], nil
