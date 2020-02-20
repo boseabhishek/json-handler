@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -52,7 +53,8 @@ func main() {
 
 	var jobsummary JobSummary
 
-	mainDir := "jobs"
+	flag.StringVar(&mainDir, "dir", "", "Usage:")
+	flag.Parse()
 
 	//for job-summary
 	byteValue, err := readFile(mainDir + "/" + "job-summary.json")
