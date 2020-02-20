@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -49,10 +50,17 @@ func main() {
 
 	var subjobs []SubJob
 	var subjob SubJob
-
 	var jobsummary JobSummary
 
-	mainDir := "jobs"
+	var mainDir string
+
+	flag.StringVar(&mainDir, "dir", "", "is a directory name")
+	flag.Parse()
+
+	if mainDir == "" {
+		fmt.Println("no directory name provided")
+		os.Exit(1)
+	}
 
 	//for job-summary
 	byteValue, err := readFile(mainDir + "/" + "job-summary.json")
@@ -171,7 +179,8 @@ func writeToFile(byte []byte) {
 		f.Close()
 		return
 	}
-	fmt.Println(l, "bytes written successfully")
+	fmt.Println(l, "bytes written successfully to ", fileName)
+	fmt.Println("******please don't forget the sweets!*********")
 	err = f.Close()
 	if err != nil {
 		fmt.Println(err)
