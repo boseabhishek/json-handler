@@ -1,0 +1,18 @@
+{
+   "AirFlowDagId": "ApplicationRuntimeService", 
+   "AirFlowDagRunId": "volumetest-1000-2008", 
+   "ApplicationName": "ApplicationRuntimeService", 
+   "ApplicationVersion": "1.0", 
+   "DigestUsed": "nightly_2020-02-14", 
+   "Elapsed(s)": "146", 
+   "EndTime": "2020-02-18 15:02:17.125934", 
+   "Node": "bmwsmsesp000258.advantagedp.org", 
+   "ReturnCode": "0", 
+   "SimBranch": "test-status", 
+   "SimBuildSet": "volumetest-1000", 
+   "SimJenkinsBuildNo": "2008", 
+   "StartTime": "2020-02-18 14:59:50.685441", 
+   "TestName": "003730aa-4d91-11ea-9943-0a580a061c25.json", 
+   "TestNumber": "10", 
+   "WorkingDirectory": "/mapr/volumetest-1000/output/NA/10"
+}
