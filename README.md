@@ -10,7 +10,11 @@ merges jsons into one (WIP) - some constraints could be improvised!
 #### Step 2:
 In the example, [jobs](jobs/) is the name of the directory which would have all the sub-directories(11, 12, 13 etc. - DOES NOT care about dir names BUT cares about file name TestStatus.json).
 
-[jobs](jobs/) also the file job-summary.json which is needed and strict on name.
+[jobs](jobs/) also has the file job-summary.json which is needed and strict on name.
+
+##### Constraints:
+- files inside sub directories MUST HAVE names TestStatus.json
+- file inside the main directory (e.g. jobs) MUST HAVE name job-summary.json
 
 > once you clone this project, you could replace the jobs directory with the one you want and execute step 3
 
@@ -18,8 +22,10 @@ In the example, [jobs](jobs/) is the name of the directory which would have all 
 
 > Usage: go run main.go -dir _directory_
 
-This will hopefully produce a file called final.json.
+example:
+> go run main.go -dir jobs
 
+This will hopefully produce a file called final.json.
 
 
 ### ToDo (for Author)
